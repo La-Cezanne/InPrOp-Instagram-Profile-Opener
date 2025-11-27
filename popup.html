@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IG Profile Opener</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>IG Profile Opener</h1>
+
+    <label for="profiles">Profile (je Profil eine neue Zeile, z.B. instagram oder https://www.instagram.com/instagram/):</label>
+    <textarea id="profiles" placeholder="instagram\nnatgeo\n..."></textarea>
+
+    <div class="controls">
+      <button id="startBtn">Start (3s)</button>
+      <button id="stopBtn" disabled>Stop</button>
+    </div>
+
+    <div class="status">
+      <div>Aktueller Index: <span id="index">0</span> / <span id="total">0</span></div>
+      <div id="currentUrl" class="currentUrl"></div>
+    </div>
+
+    <div class="notes">
+      <strong>Hinweis:</strong> Das Öffnen läuft nur, solange dieses Popup offen bleibt (siehe Hilfe unten).
+    </div>
+
+    <details>
+      <summary>Hilfe / Einschränkungen</summary>
+      <ul>
+        <li>Dieses Popup öffnet jede 5 Sekunden ein neues Tab (Hintergrundtab, falls möglich).</li>
+        <li>Wenn du das Popup schließt, stoppt der Vorgang. Für dauerhaftes Hintergrund-Polling sind komplexere Lösungen nötig (siehe Anleitung unten).</li>
+        <li>Missbrauch vermeiden: zu viele Tabs können dein System/Account belasten.</li>
+      </ul>
+    </details>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
